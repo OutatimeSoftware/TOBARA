@@ -1,3 +1,13 @@
+def main():
+	
+	funcion = input()
+
+	# Funcion para capturar los terminos.
+	
+	getFun( funcion )
+	
+	print( getTable(  ) )
+
 def getBin ( val, var ):
 
 	binario = [  ]
@@ -20,7 +30,7 @@ def getBin ( val, var ):
 
 	binario.reverse(  )
 
-	# Quita esto flojo
+	# Quita esto flojo o cambialo xd
 
 	binario.append( 0 )
 
@@ -39,3 +49,7 @@ def getTable (  ):
 		table.append( getBin( i, var ) )
 
 	return table
+	
+if __name__ == "__main__":
+
+    main()
