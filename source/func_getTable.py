@@ -39,5 +39,3 @@ def getTable (  ):
 		table.append( getBin( i, var ) )
 
 	return table
-
-print( getTable(  ) )
