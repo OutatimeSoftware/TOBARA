@@ -20,24 +20,4 @@ def getBin ( val, var ):
 
 	binario.reverse(  )
 
-	# Quita esto flojo
-
-	binario.append( 0 )
-
 	return binario
-
-def getTable (  ):
-
-	table = [  ]
-
-	var = 3
-
-	tam = y = 2 ** var 
-
-	for i in range( y ):
-
-		table.append( getBin( i, var ) )
-
-	return table
-
-print( getTable(  ) )
