@@ -1,12 +1,9 @@
 def main():
-	
-	funcion = input()
 
+	# lista de mintérminos.
+	fun = [ 0, 1, 2, 3, 4 ];
 	# Funcion para capturar los terminos.
-	
-	getFun( funcion )
-	
-	print( getTable(  ) )
+	print( getTable( fun ) )
 
 def getBin ( val, var ):
 
@@ -30,13 +27,11 @@ def getBin ( val, var ):
 
 	binario.reverse(  )
 
-	# Quita esto flojo o cambialo xd
-
 	binario.append( 0 )
 
 	return binario
 
-def getTable (  ):
+def getTable ( fun ):
 
 	table = [  ]
 
@@ -47,6 +42,10 @@ def getTable (  ):
 	for i in range( y ):
 
 		table.append( getBin( i, var ) )
+	
+	for i in fun:
+	
+		table[i][ var ] = 1
 
 	return table
 	

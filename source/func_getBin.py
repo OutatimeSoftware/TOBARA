@@ -1,3 +1,5 @@
+# Actualizado 21 de Mayo 2020
+# Función funcional
 def getBin ( val, var ):
 
 	binario = [  ]
@@ -19,5 +21,7 @@ def getBin ( val, var ):
 		binario.append( 0 )
 
 	binario.reverse(  )
+
+	binario.append( 0 )
 
 	return binario
