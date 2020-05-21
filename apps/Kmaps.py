@@ -21,7 +21,9 @@ def main():
 	
 	celdasX, celdasY = 4, 4
 	
-	#Creaciond de pantalla
+	kmap = np.zeros( ( celdasX, celdasY ) )
+	
+	#Creacion de pantalla
 
 	width, height = 100 * celdasX, 100 * celdasY
 	screen = pygame.display.set_mode((width, height))
