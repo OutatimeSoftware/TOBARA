@@ -1,15 +1,5 @@
-def main():
-
-	# lista de mintérminos.
-	fun = [ 0, 3, 12, 15 ];
-	var = 4
-	
-	Kmap = getKmap( var, fun )
-
-	for i in Kmap:
-		
-		print( i )
-
+# Actualizado 21 de Mayo 2020
+# Función funcional
 def getKmap( var, fun ):
 	
 	Kmap = [  ]
@@ -31,7 +21,3 @@ def getKmap( var, fun ):
 		Kmap[ y ][ x ] = 1
 		
 	return Kmap
-		
-if __name__ == "__main__":
-
-    main()

@@ -16,4 +16,4 @@
 
 5. Codificación: Para ir probando el código se seguirá usando en la carpeta principal el archivo main.py, luego de comprobar el funcionamiento de las funciones se dividirán en las funciones individuales en Source. 
 
-Nota. Las dos primeras funciones ya están listas.
+Nota. Las tres primeras funciones ya están listas.
