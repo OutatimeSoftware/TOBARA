@@ -2,6 +2,15 @@ import pygame
 import numpy as np
 import time
 
+def info( screen, noTer ):
+   
+	font = pygame.font.Font( None, 30 )
+   
+	minTerminos = font.render( "Mintérminos" + str( noTer ), 1, ( 160, 160, 160 ) )
+   
+	screen.blit( minTerminos, ( 2, 3) )
+
+
 def main():
 
 	# inicializa pygame
@@ -21,13 +30,14 @@ def main():
 	#Declaración de variables
 	
 	varX, varY = 4, 4
-	cellSize = 50
+	cellSize = 75
+	noTer = 0
 	
 	kmap = np.zeros( ( varX, varY ) )
 	
 	#Creación de pantalla
 
-	width, height = varX * cellSize, varY * cellSize 
+	width, height = varX * cellSize, ( varY * cellSize ) + 50
 	screen = pygame.display.set_mode( ( width, height ) )
 	screen.fill( bgFalse )
 	
@@ -45,26 +55,38 @@ def main():
 		for event in ev:
 			
 			#Detectar interacci[on con el mouse
-			mouseClick = pygame.mouse.get_pressed()
+			click = pygame.mouse.get_pressed()
 			
-			if( sum(mouseClick) > 0 ):
+			if( sum( click ) > 0 ):
 			
 				posX, posY = pygame.mouse.get_pos()
 				
-				celX, CelY = int( posX / cellSize ), int( posY / cellSize )
+				celX, celY = int( posX / cellSize ), int( ( posY - 50 ) / cellSize )
 				
-				kmap[ celX, CelY ] = not mouseClick[ 2 ]
+				if( not click[ 2 ] ):
 				
+					if( not kmap[ celX, celY ] ):
+					
+						noTer += 1
+						
+						kmap[ celX, celY ] = True
+					
+				elif( kmap[ celX, celY ] ):
+					
+						noTer -= 1
+						
+						kmap[ celX, celY ] = False
+			
 		#Creacion de la cadricula
 		
 		for y in range( 0, varY ):
 		
 			for x in range( 0, varX ):
 				
-				poly = [( ( x ) * cellSize, ( y ) * cellSize ),
-						( ( x + 1 ) * cellSize, ( y ) * cellSize ),
-						( ( x + 1 ) * cellSize, ( y + 1 ) * cellSize ),
-						( ( x ) * cellSize, ( y + 1 ) * cellSize ) ]
+				poly = [( ( x ) * cellSize, 	( ( y ) 	  * cellSize ) + 50 ),
+						( ( x + 1 ) * cellSize, ( ( y ) 	  * cellSize ) + 50 ),
+						( ( x + 1 ) * cellSize, ( ( y + 1 )	  * cellSize ) + 50 ),
+						( ( x ) * cellSize, 	( ( y + 1 )   * cellSize ) + 50 ) ]
 				
 				if( kmap[ x, y ] == 0 ):
 					pygame.draw.polygon( screen, bgFalse, poly, 0 )
