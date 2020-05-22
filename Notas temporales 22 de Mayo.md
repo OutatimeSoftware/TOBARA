@@ -5,3 +5,4 @@
 2. Se hizo la primera simulación  de librerias.
 3. Implementación de la función getMinTable() lista y probada.
 4. Simulación de librerias correcta, es archivo de esta versión contiene las pruebas del sistema.
+5. Inicio de implementaci[on del sistema de reducci[on
