@@ -12,11 +12,11 @@ def getKmap( var, fun ):
 		
 			Kmap[ i ].append( 0 )
 
-	for i in fun:
+	for minTer in fun:
 		
-		x = ( i ) // var
+		x = ( minTer ) // var
 		
-		y = ( i ) % var
+		y = ( minTer ) % var
 		
 		Kmap[ y ][ x ] = 1
 		
