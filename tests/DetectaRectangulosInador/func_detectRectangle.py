@@ -3,28 +3,42 @@ from func_getKmap import *
 
 def reduceKmap( kmap ):
 	
-	active = kmap
+	mask = kmap
 	
 	x = 0
 	
 	y = 0
 	
-	for line in active:
+	for line in mask:
 		
 		y += 1 
 		
-		x = 0
-		
 		for cell in line:
 		
-			x += 1
+			x = ( x + 1 ) % 4
 		
 			if( cell == 1 ):
 				
-				print( x, y )
+				detectRectangle( kmap, mask, x, y )
+			
+def	checkLineH( kmap, ref, start, end ):
 	
-def detectRectangle( kmap, x, y ):
+	pass
 	
+
+def detectRectangle( kmap, mask, x, y ):
+	
+	rect = [ ( x, y ), ( x, y ) ]
+	
+	while( kmap[ x + 1  ][ y + 1 ] ):
+		
+		 x += 1
+		 y += 1
+		
+		print( "Active" )
+	
+	#Extra para ver cuantas veces entra la función
+	print( x, y )
 	
 	
 
@@ -32,6 +46,7 @@ def main():
 
 	# lista de mintérminos.
 	fun = [ 0, 4 ]
+	
 	var = 4
 	
 	kmap = getKmap( var, fun )
