@@ -69,13 +69,15 @@ def detectRectangle( kmap, mask, x, y, var ):
 			
 			y += 1
 			
-	print( origenX, origenY )
-	print( x - 1, y - 1 )
+	form = [ ( origenX, origenY ), 
+			 ( ( x - 1 ), ( y - 1 ) ) ]
+
+	print( form )
 
 def main():
 
 	# lista de mintérminos.
-	fun = [ 0, 1, 2, 4, 6, 8, 9, 10 ]
+	fun = [ 0, 1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 14 ]
 	
 	var = 4
 	
