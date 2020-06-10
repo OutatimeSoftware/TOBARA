@@ -20,9 +20,22 @@ def reduceKmap( kmap ):
 			if( cell == 1 ):
 				
 				detectRectangle( kmap, mask, x, y, 1 )
-	"""
+		"""
 	detectRectangle( kmap, mask, x, y, 1 )
-			
+
+
+def zeros( mask, form ):
+	
+	x, y = form[ 0 ][ 0 ], form[ 0 ][ 1 ]
+	
+	xf , yf = form[ 1 ][ 0 ], form[ 1 ][ 1 ]
+
+	for line in range( y, yf ):
+
+		for cell in range( x, xf ):
+
+			mask[ line ][ cell ] = 0
+
 def	checkLineH( kmap, ref ):
 	
 	x = ref
@@ -57,22 +70,20 @@ def detectRectangle( kmap, mask, x, y, var ):
 	
 	origenY = y
 
-	if( x == y ):
-		
-		while( kmap[ x ][ y ] == 1 ):
+	while( kmap[ x ][ y ] == 1 ):
 			
-			if ( checkLineH( kmap, x ) == False or checkLineV( kmap, y ) == False ):
+		if ( checkLineH( kmap, x ) == False or checkLineV( kmap, y ) == False ):
 				
-				break
+			break
 			
-			x += 1
+		x += 1
 			
-			y += 1
+		y += 1
 			
 	form = [ ( origenX, origenY ), 
-			 ( ( x - 1 ), ( y - 1 ) ) ]
+			 ( ( x ), ( y ) ) ]
 
-	print( form )
+	zeros( mask, form )
 
 def main():
 
