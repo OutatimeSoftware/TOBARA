@@ -8,27 +8,30 @@ def reduceKmap( kmap ):
 	x = 0
 	
 	y = 0
+
 	"""
+
 	for line in mask:
-		
-		y += 1 
 		
 		for cell in line:
 		
-			x = ( x + 1 ) % 4
-		
 			if( cell == 1 ):
 				
-				detectRectangle( kmap, mask, x, y, 1 )
-		"""
-	detectRectangle( kmap, mask, x, y, 1 )
+				print( "El inicio es: [ {}, {} ]".format(x,y) )
 
+			x = ( x + 1 ) % 4
+
+		y += 1 
+
+	"""
+
+	detectRectangle( kmap, mask, x, y, 1 )
 
 def zeros( mask, form ):
 	
 	x, y = form[ 0 ][ 0 ], form[ 0 ][ 1 ]
 	
-	xf , yf = form[ 1 ][ 0 ], form[ 1 ][ 1 ]
+	xf , yf = form[ 1 ][ 0 ] + 1, form[ 1 ][ 1 ] + 1
 
 	for line in range( y, yf ):
 
@@ -79,16 +82,34 @@ def detectRectangle( kmap, mask, x, y, var ):
 		x += 1
 			
 		y += 1
-			
-	form = [ ( origenX, origenY ), 
-			 ( ( x ), ( y ) ) ]
+	
+	x -= 1
+
+	y -= 1
+
+	print( x, y )
+
+	while( kmap[ x ][ y ] == 1 ):
+
+		if( checkLineV( kmap, y - 1 ) == False ):
+
+			break
+
+		x += 1
+	
+	form = [ ( origenX, origenY ),
+			 ( x, y ) ]
 
 	zeros( mask, form )
+
+	for line in mask:
+		
+		print( line )
 
 def main():
 
 	# lista de mintérminos.
-	fun = [ 0, 1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 14 ]
+	fun = [ 0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 13, 14 ]
 	
 	var = 4
 	
