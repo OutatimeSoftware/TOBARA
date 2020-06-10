@@ -2,14 +2,16 @@ from func_getBin import *
 from func_getKmap import *
 
 def reduceKmap( kmap ):
+
+	forms = [ ]
 	
 	mask = kmap
 	
+	var = 4
+
 	x = 0
 	
 	y = 0
-
-	"""
 
 	for line in mask:
 		
@@ -17,15 +19,15 @@ def reduceKmap( kmap ):
 		
 			if( cell == 1 ):
 				
-				print( "El inicio es: [ {}, {} ]".format(x,y) )
+				detectRectangle( kmap, mask, x, y, var, forms )
 
 			x = ( x + 1 ) % 4
 
 		y += 1 
 
-	"""
+	for item in forms:
 
-	detectRectangle( kmap, mask, x, y, 1 )
+		print( item )
 
 def zeros( mask, form ):
 	
@@ -67,8 +69,8 @@ def	checkLineV( kmap, ref ):
 		
 	return True
 
-def detectRectangle( kmap, mask, x, y, var ):
-	
+def detectRectangle( kmap, mask, x, y, var, forms ):
+
 	origenX = x
 	
 	origenY = y
@@ -105,6 +107,8 @@ def detectRectangle( kmap, mask, x, y, var ):
 	for line in mask:
 		
 		print( line )
+
+	forms.append( form )
 
 def main():
 
