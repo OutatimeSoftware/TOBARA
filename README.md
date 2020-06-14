@@ -1,3 +1,5 @@
+![](https://github.com/MiguelRAvila/projectTOBARA/blob/master/images/logo.svg)
+
 # projectTOBARA
 
 The Only Boolean Algebra Reduction App
