@@ -1,5 +1,6 @@
-![](https://github.com/MiguelRAvila/projectTOBARA/blob/master/images/logo.png)
-
+<p align="center">
+  <img src="https://github.com/MiguelRAvila/projectTOBARA/blob/master/images/logo.png?raw=true" alt="TOBARALogo"/>
+</p>
 # projectTOBARA
 
 The Only Boolean Algebra Reduction App
