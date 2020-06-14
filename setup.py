@@ -4,11 +4,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="TOBARA-pkg-MiguelRAvila", 
-    version="0.0.1",
+    name="TOBARA", 
+    version="0.1.0",
     author="Miguel R. Ávila",
     author_email="miguelravila@outlook.com",
-    description="Nuestro sistema es una herramienta de análisis de funciones booleanas, cuya tarea principal es reducir lo máximo posible una función booleana. Con estos datos realizaremos una API que permita a cualquier usuario consultar estos elementos de cualquier función booleana que quieran introducir.",
+    description="projectTOBARA is a toolkit of Boolean function analysis whose main task is to reduce Boolean functions as much as possible. Our objetive is to determine information about the function like variables, terms and then reduce the function.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/MiguelRAvila/projectTOBARA",
