@@ -2,7 +2,7 @@
 
 The Only Boolean Algebra Reduction App
 
-## Descrption
+## Description
 
 Our system is a Boolean function analyzer tool which main task is to reduce the function in its simplest expression. 
 With this information we will create an library that allow to any user consulate the elements of any Boolean function they want to introduce. 
