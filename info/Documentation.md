@@ -16,7 +16,7 @@ Our main goal is the analysis of the Boolean functions and the breakdown of thei
 -	Determinate their terms
 -	Simplify the function
 
-## Objetive
+## Objective
 
 Algorithms for reducing Boolean functions. 
 
@@ -24,25 +24,25 @@ Algorithms for reducing Boolean functions.
 
 ##### UC001. Simplest expression
 
-*Description:* Consult if the function is in its simplest expression.
+**Description:** Consult if the function is in its simplest expression.
 
-*Sequence*
+**Sequence**
 
 1. Consult the tool Mini(funciónBool).
 2. Receives a Boolean value (True or False).
 
-*Alternative departures:* 1.1 If the user ingress an invalid input the system will return error and the user will have to change it.
+**Alternative departures:** 1.1 If the user ingress an invalid input the system will return error and the user will have to change it.
 
 
 ##### UC002. Simplify
 
-*Description:* Given a Boolean function, the system returns its simples expression. 
+**Description:** Given a Boolean function, the system returns its simples expression. 
 
-*Sequence*
+**Sequence**
 
 1. Consult the tool reducc(funciónBool).
 2. Receives an array with the simplified function.
 
-*Alternative departures:* 1.1 If the user ingress an invalid character the system will return error and the user will have to change it.
+**Alternative departures:** 1.1 If the user ingress an invalid character the system will return error and the user will have to change it.
 
 
