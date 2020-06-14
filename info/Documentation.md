@@ -24,7 +24,7 @@ Algorithms for reducing Boolean functions.
 
 ##### UC001. Simplest expression
 
-*Description* Consult if the function is in its simplest expression.
+*Description:* Consult if the function is in its simplest expression.
 
 *Sequence*
 
@@ -36,7 +36,7 @@ Algorithms for reducing Boolean functions.
 
 ##### UC002. Simplify
 
-*Description* Given a Boolean function, the system returns its simples expression. 
+*Description:* Given a Boolean function, the system returns its simples expression. 
 
 *Sequence*
 
