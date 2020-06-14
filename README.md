@@ -1,4 +1,4 @@
-![](https://github.com/MiguelRAvila/projectTOBARA/blob/master/images/logo.svg =250x250)
+![](https://github.com/MiguelRAvila/projectTOBARA/blob/master/images/logo.png)
 
 # projectTOBARA
 
