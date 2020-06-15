@@ -2,9 +2,9 @@
 
 ## [Implementación]
 
-Después de la investigación, se implentó la organización que tendrá la librería, la cual quedo de la siguiente manera: 
++ Después de la investigación, se implentó la organización que tendrá la librería, la cual quedó de la siguiente manera: 
 
-    TOBARA_pkg_ (donde se aloja el código)
+    TOBARA_pkg_ (donde el código se aloja)
     TOBARA_pkg_info (donde se almacenan datos de deploy)
     apps (código)
     dist (paquetes de distribución)
@@ -12,4 +12,4 @@ Después de la investigación, se implentó la organización que tendrá la libr
     info (carpeta de la documentación)
     test (documentos del testeo)
 
-Y se realizó la bitácora correspondiente.
++ Se realizó la bitácora correspondiente.
