@@ -2,7 +2,7 @@
 
 ## [Pruebas del proyecto]
 
-Se realizaron algunas actividades:
++ Se realizaron algunas actividades:
 
     1. Se movió el archivo main a la carpeta source para tener todo más organizado.
     2. Se hizo la primera simulación de librerías.
@@ -10,4 +10,4 @@ Se realizaron algunas actividades:
     4. Simulación de librerias correcta, es archivo de esta versión contiene las pruebas del sistema.
     5. Inicio de implementación del sistema de reducción
 
-Y se realizó la bitácora correspondiente.
++ Se realizó la bitácora correspondiente.
