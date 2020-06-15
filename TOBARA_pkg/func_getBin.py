@@ -1,27 +1,21 @@
-# Actualizado 21 de Mayo 2020
+# Actualizado 15 de junio 2020
 # Función funcional
 def getBin ( val, var ):
 
-	binario = [  ]
+    binario = [  ]
 
-	check = True
+    for cell in bin( val )[ 2: ]:
+        
+        binario.append( int( cell ) )
 
-	while ( val != 1 and val != 0 ):
+    tam = len( binario )
 
-		binario.append( val % 2 )
+    for i in range( var - tam ):
+    
+        binario.append( 0 )
+        
+    binario.reverse(  )
 
-		val = val // 2
+    binario.append( 0 )
 
-	binario.append( val % 2 )
-
-	tam = len( binario )
-
-	for i in range( var - tam ):
-	
-		binario.append( 0 )
-
-	binario.reverse(  )
-
-	binario.append( 0 )
-
-	return binario
+    return binario

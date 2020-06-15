@@ -162,23 +162,23 @@ def binaryToLetter( s ):
     
     return result
 
-def reduceFun( fun, n ):  
+def reduceFun( n, fun ):  
 
     # transformación de lista en enteros
     fun = list( map( int, fun ) )
 
     # Crea la lista inicial
-    group = [ [ ] for x in range (n + 1 )]
+    group = [ [ ] for x in range ( n + 1 )]
 
     for i in range( len( fun )):
 
         # Conversor a binario
         fun[ i ] = bin( fun[ i ] )[ 2: ]
 
-        if len( fun[ i ]) < n:
+        if len( fun[ i ] ) < n:
             # Completar el término con ceros
             for j in range( n - len( fun[ i ] ) ):
-                fun[ i ] = '0'+ fun[ i ]
+                fun[ i ] = '0' + fun[ i ]
        
         # grupos de 1
         index = fun[ i ].count( '1' )
@@ -208,5 +208,3 @@ def reduceFun( fun, n ):
 
     # - 3 para eliminar el " + " extra 
     return s[ :( len( s ) - 3 ) ]
-
-# Check - print( reduceFun( [ 0, 1, 4, 5 ], 4 ) ) resultado: a'c'
