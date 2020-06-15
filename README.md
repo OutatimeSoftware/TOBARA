@@ -16,6 +16,11 @@ TOBARA (The Only Boolean Algebra Reduction App) is a toolkit of Boolean function
 * [Documentation](https://github.com/MiguelRAvila/projectTOBARA/blob/master/info/Documentation.md)
 
 ## News
+The News Section is the way we represent the advances of our project, you can find all of the journals here: [Journals](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs/Journey)
+
+
+* [TOBARA 1.0.2 Released! Getting better documentation](https://pypi.org/project/TOBARA/)
+* [TOBARA 1.0.1 Released! Getting better code](https://pypi.org/project/TOBARA/)
 * [TOBARA 1.0.0 Released!](https://pypi.org/project/TOBARA/)
 * [Function "minTerm" finished!](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs/Journey/MinTerms-27-May-2020.md)
 * [Library Research finished](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs/Journey/Library_Research-02-June-2020.md)
@@ -38,6 +43,8 @@ python3 -m pip install TOBARA
 ## Docs
 
 projectTOBARA documentation is available here: [Documentation](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs)
+Here you can find our Journals where we wrote all of our advances in the Project
+Also you can check the documents that we wrote for our project.
 
 ## Team Organization:
 
