@@ -10,9 +10,9 @@ def reduceKmap( kmap ):
 	var = 4
 
 	x = 0
-	
-	y = 0
 
+	y = 0
+	'''
 	for line in mask:
 		
 		for cell in line:
@@ -21,13 +21,16 @@ def reduceKmap( kmap ):
 				
 				detectRectangle( kmap, mask, x, y, var, forms )
 
-			x = ( x + 1 ) % 4
+			x = ( x + 1 ) % var
 
 		y += 1 
+		'''
+	detectRectangle( kmap, mask, x, 1, var, forms )
 
-	for item in forms:
 
-		print( item )
+	if ( checkLineH( kmap, 1, 0, 0 ) ):
+
+		print(" :D ")
 
 def zeros( mask, form ):
 	
@@ -41,31 +44,35 @@ def zeros( mask, form ):
 
 			mask[ line ][ cell ] = 0
 
-def	checkLineH( kmap, ref ):
-	
-	x = ref
-	
-	while( x > 0 ):
-	
-		if( kmap[ ref ][ x ] != 1 ):
+def	checkLineH( kmap, ref, ini, fin ):
 
-			return False			
-			
-		x -= 1
-		
-	return True
-	
-def	checkLineV( kmap, ref ):
-	
-	x = ref
-	
-	while( x > 0 ):
-	
-		if( kmap[ x ][ ref ] != 1 ):
+	if ( ini < fin ):
 
-			return False			
+		for position in range( ini, fin ):
+
+			if( kmap[ ref ][ position ] != 1 ):
+
+				return False
 			
-		x -= 1
+		return True
+
+	else:
+
+		for position in range( ini, fin - 1, -1 ):
+
+			if( kmap[ ref ][ position ] != 1 ):
+
+				return False
+			
+		return True
+	
+def	checkLineV( kmap, ref, ini, fin ):
+	
+	for position in range( ini, fin ):
+
+		if( kmap[ position ][ ref ] != 1 ):
+
+			return False
 		
 	return True
 
@@ -76,44 +83,28 @@ def detectRectangle( kmap, mask, x, y, var, forms ):
 	origenY = y
 
 	while( kmap[ x ][ y ] == 1 ):
-			
-		if ( checkLineH( kmap, x ) == False or checkLineV( kmap, y ) == False ):
-				
+
+		if( checkLineH( kmap, x, origenX, x ) == False or checkLineV( kmap, y, origenY, y ) == False  ):
+
 			break
-			
+
 		x += 1
 			
 		y += 1
-	
-	x -= 1
-
-	y -= 1
 
 	print( x, y )
-
-	while( kmap[ x ][ y ] == 1 ):
-
-		if( checkLineV( kmap, y - 1 ) == False ):
-
-			break
-
-		x += 1
 	
 	form = [ ( origenX, origenY ),
 			 ( x, y ) ]
 
 	zeros( mask, form )
 
-	for line in mask:
-		
-		print( line )
-
 	forms.append( form )
 
 def main():
 
 	# lista de mintérminos.
-	fun = [ 0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 13, 14 ]
+	fun = [ 0, 1, 2, 4, 5, 6, 7, 8, 9, 10 ]
 	
 	var = 4
 	

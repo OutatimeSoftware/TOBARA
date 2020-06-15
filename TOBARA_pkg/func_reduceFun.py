@@ -248,15 +248,3 @@ def reductFun( fun, n ):
 
     # - 3 para eliminar el " + " extra 
     return s[ :( len( s ) - 3 ) ]
-
-def main():
-
-    fun = [ 0, 3 ]
-
-    n = 2
-
-    print( reductFun( fun, n ) )
-
-if __name__ == "__main__":
-
-    main()
