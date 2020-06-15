@@ -4,7 +4,7 @@
   <h3 > projectTOBARA: The Only Boolean Algebra Reduction App</h3>
 </p>
 
-[![Inline docs](http://inch-ci.org/github/dwyl/hapi-auth-jwt2.svg?branch=master)](#)
+[![Inline docs](http://inch-ci.org/github/dwyl/hapi-auth-jwt2.svg?branch=master)](https://github.com/MiguelRAvila/projectTOBARA/tree/master/docs)
 ![version](https://img.shields.io/badge/version-1.0.2-blue)
 <a href='#'><img src='https://img.shields.io/badge/python-3.6-blue.svg'></a>
 <a href='https://pypi.org/project/TOBARA/#history'><img src='https://img.shields.io/pypi/v/gluonnlp.svg'></a>
