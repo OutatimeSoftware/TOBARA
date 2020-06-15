@@ -45,4 +45,10 @@ Algorithms for reducing Boolean functions.
 
 **Alternative departures:** 1.1 If the user ingress an invalid character the system will return error and the user will have to change it.
 
+## Project Organization
 
+Here we have the documentation for our project organization: [Project Org](https://github.com/MiguelRAvila/projectTOBARA/blob/master/info/TOBARA_DOCUMENTATION.pdf)
+
+## Journals
+
+We've registered all of our most important advances in our project, you can find them here: [Journals](https://github.com/MiguelRAvila/projectTOBARA/blob/master/info/Journey)
