@@ -47,8 +47,8 @@ Algorithms for reducing Boolean functions.
 
 ## Project Organization
 
-Here we have the documentation for our project organization: [Project Org](https://github.com/MiguelRAvila/projectTOBARA/blob/master/info/TOBARA_DOCUMENTATION.pdf)
+Here we have the documentation for our project organization: [Project Org](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs/TOBARA_Documentation.pdf)
 
 ## Journals
 
-We've registered all of our most important advances in our project, you can find them here: [Journals](https://github.com/MiguelRAvila/projectTOBARA/blob/master/info/Journey)
+We've registered all of our most important advances in our project, you can find them here: [Journals](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs/Journey)
