@@ -31,5 +31,6 @@ pip install TOBARA
 projectTOBARA documentation is available here: [Documentation](https://github.com/MiguelRAvila/projectTOBARA/blob/master/info/Documentation.md)
 
 ## Quick Start Guide
-In progress...
+
+> The *Quick Start Guide* will be available soon.
 
