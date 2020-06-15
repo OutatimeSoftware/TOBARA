@@ -12,7 +12,7 @@
 TOBARA (The Only Boolean Algebra Reduction App) is a toolkit of Boolean function analysis whose main task is to reduce Boolean functions as much as possible. Our objetive is to determine information about the function like variables, terms and then reduce the function.  
 
 * [Quick Stat Guide](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs/QuickStart.md)
-* [Each Function Documentation](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs/Function_Documentation.mdd)
+* [Each Function Documentation](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs/Function_Documentation.md)
 * [Documentation](https://github.com/MiguelRAvila/projectTOBARA/blob/master/info/Documentation.md)
 
 ## News
