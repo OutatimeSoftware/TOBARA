@@ -56,4 +56,4 @@ Our team organization is available here: [Team Organization](https://github.com/
 ## Test
 
 Our project works in Python (Up to version 3.6) You can find our test here:
-* [Our tests](#)
+* [Our tests](https://github.com/Apoquinto/TOBARA-Testing/blob/master/Tests.ipynb)
