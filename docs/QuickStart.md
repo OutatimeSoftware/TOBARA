@@ -4,7 +4,7 @@ TOBARA is a Python library designed for the manipulation of Boolean algebra that
 
 To define a Boolean function we need to establish the number of variables that conform it, you can get this information if you observe the number of letters that are involved in your Boolean function, on the other hand, the minters are the Boolean representation of those variables.
 
-If you think about it, there is a really simple relation between the variables and the minterms. Every time you add a variable you have to consider two other ways to form a term, but let look it in a more way: 
+If you think about it, there is a really simple relation between the variables and the minterms. Every time you add a variable you have to consider two other ways to form a term, but lets look at it on a more visual way: 
 
 
 

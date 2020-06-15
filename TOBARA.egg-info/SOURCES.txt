@@ -1,0 +1,15 @@
+README.md
+setup.py
+TOBARA/__init__.py
+TOBARA/func_detectRectangle.py
+TOBARA/func_getBin.py
+TOBARA/func_getKmap.py
+TOBARA/func_getMinTable.py
+TOBARA/func_getTable.py
+TOBARA/func_reduceFun.py
+TOBARA/func_reduceKmap.py
+TOBARA/main.py
+TOBARA.egg-info/PKG-INFO
+TOBARA.egg-info/SOURCES.txt
+TOBARA.egg-info/dependency_links.txt
+TOBARA.egg-info/top_level.txt
