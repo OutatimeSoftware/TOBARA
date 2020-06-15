@@ -1,6 +1,0 @@
-README.md
-setup.py
-TOBARA_pkg_MiguelRAvila.egg-info/PKG-INFO
-TOBARA_pkg_MiguelRAvila.egg-info/SOURCES.txt
-TOBARA_pkg_MiguelRAvila.egg-info/dependency_links.txt
-TOBARA_pkg_MiguelRAvila.egg-info/top_level.txt

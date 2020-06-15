@@ -1,0 +1,6 @@
+README.md
+setup.py
+TOBARA.egg-info/PKG-INFO
+TOBARA.egg-info/SOURCES.txt
+TOBARA.egg-info/dependency_links.txt
+TOBARA.egg-info/top_level.txt
