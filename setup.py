@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="TOBARA", 
-    version="1.0.2",
+    version="1.0.3",
     author="Miguel R. Ávila",
     author_email="miguelravila@outlook.com",
     description="TOBARA (The Only Boolean Algebra Reduction App) is a toolkit of Boolean function analysis whose main task is to reduce Boolean functions as much as possible. Our objetive is to determine information about the function like variables, terms and then reduce the function.",
