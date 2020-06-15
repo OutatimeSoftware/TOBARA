@@ -2,9 +2,9 @@
 
 ## [Modificaciones del algoritmo del proyecto]
 
-Se aprovecho a seguir una idea para hacer más claro el proceso del algoritmo: 
++ Se aprovechó a seguir una idea para hacer más claro el proceso del algoritmo: 
 
-    * Tenemos dos matrices, el original que nunca se modificará y un detector de puntos. El original nos servirá para hacer más copias para detectar los cuadrados sin inteferir en colisiones.
+    * Tenemos dos matrices, la original que nunca se modificará y un detector de puntos. El original nos servirá para hacer más copias para detectar los cuadrados sin inteferir en colisiones.
 
     * El detector de puntos (active) Servirá para marcar cuales son las formas que se han encontrado hasta ahora, la idea es capturar a los términos incompletos mediante la búsqueda de rectángulos que cumplan las condiciones:
 
@@ -15,8 +15,8 @@ Se aprovecho a seguir una idea para hacer más claro el proceso del algoritmo:
 
     * Para la captura de los rectángulos se guardaran mediante 4 coordenadas que indican el tamaño del rectángulo.
 
-    * Todas estas serán guardadarán en una lista llamada MinTerms [] que serán las expresiones mínimas de la función.
+    * Todas estas serán guardadas en una lista llamada MinTerms [] que serán las expresiones mínimas de la función.
 
     * Una vez sacados todos los minTerms, podemos pasar a la interpretación de los rectángulos, pero eso sera apenas se termine y compruebe el funcionamiento de la función reduceKmap().
 
-Y se realizó la bitácora correspondiente.
++ Se realizó la bitácora correspondiente.
