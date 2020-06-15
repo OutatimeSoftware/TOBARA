@@ -40,9 +40,9 @@ def compBinarySame( term, number ):
     
     for i in range( len( term ) ):
     
-        if term[i] != '-':
+        if term[ i ] != '-':
     
-            if term[i] != number[i]:
+            if term[ i ] != number[ i ]:
     
                 return False
 
@@ -51,13 +51,13 @@ def compBinarySame( term, number ):
 # Comprueba si hay parejas con elementos reducibles y crea un nuevo grupo
 def combinePairs( group, result ):
     # Define el tamaño del grupo
-    size = len(group) -1
+    size = len( group ) -1
 
     # Inicializa lista para verificar comprobación
     check = [ ]
 
     # Crea el nuevo grupo de terminos
-    next_group = [ [ ] for x in range( size )]
+    nextGroup = [ [ ] for x in range( size )]
 
     # Comprueba cada elemento del grupo comparandolo con el siguiente
     for i in range( size ):
@@ -76,13 +76,13 @@ def combinePairs( group, result ):
                     check.append( element2 )
                     
                     #Anula los valores simplificables con un ( "-" )
-                    new_element = list( element )
+                    newElement = list( element )
                     
-                    new_element [ pos ] = '-'
+                    newElement [ pos ] = '-'
                     
-                    new_element = "".join( new_element )
+                    newElement = "".join( newElement )
                     
-                    next_group[ i ].append( new_element )
+                    nextGroup[ i ].append( newElement )
 
     for i in group:
 
@@ -92,12 +92,12 @@ def combinePairs( group, result ):
 
                 result.append(j)
 
-    return next_group, result
+    return nextGroup, result
 
 # Descarta listas repetidas en la tabla
-def remove_redundant( group ):
+def removeRedundant( group ):
 
-    new_group = [ ]
+    newGroup = [ ]
     
     for j in group:
     
@@ -109,13 +109,13 @@ def remove_redundant( group ):
     
                 new.append( i )
     
-        new_group.append( new )
+        newGroup.append( new )
     
-    return new_group
+    return newGroup
 
 # Función de comprobación para grupos vacios
 # Retorna un valor booleano en respuesta 
-def check_empty(group):
+def checkEmpty(group):
 
     if len( group ) == 0:
 
@@ -136,46 +136,6 @@ def check_empty(group):
             return True
     
     return False
-
-
-# Busca los implicantes esenciales
-def find_prime(Chart):
-
-    prime = [  ]
-    
-    for x in range( len( Chart[ 0 ] ) ):
-    
-        cont = 0
-    
-        pos = 0
-    
-        for y in range( len( Chart ) ):
-    
-            # implicante especial
-            if Chart[ y ][ x ] == 1:
-    
-                cont += 1
-    
-                pos = y
-
-        if ( cont == 1 ):
-    
-            prime.append( pos )
-
-    return prime
-
-# Comprueba la condición para el algoritmo de patrick
-def checkAllZeros( Chart ):
-    
-    for i in Chart:
-    
-        for j in i:
-    
-            if j != 0:
-    
-                return False
-    
-    return True
 
 # Cambiar de binario a letra
 def binaryToLetter( s ):
@@ -202,7 +162,7 @@ def binaryToLetter( s ):
     
     return result
 
-def reductFun( fun, n ):  
+def reduceFun( fun, n ):  
 
     # transformación de lista en enteros
     fun = list( map( int, fun ) )
@@ -227,18 +187,18 @@ def reductFun( fun, n ):
         group[ index ].append( fun[ i ])
 
 
-    all_group = [ ]
+    allGroup = [ ]
 
     result = [ ]
     
     # Combinar las parejas que no han sido conbinadas
-    while check_empty( group ) == False:
+    while checkEmpty( group ) == False:
 
-        all_group.append( group )
+        allGroup.append( group )
         
-        next_group, result = combinePairs( group, result )
+        nextGroup, result = combinePairs( group, result )
         
-        group = remove_redundant( next_group )
+        group = removeRedundant( nextGroup )
 
     s = ""
 
@@ -248,3 +208,5 @@ def reductFun( fun, n ):
 
     # - 3 para eliminar el " + " extra 
     return s[ :( len( s ) - 3 ) ]
+
+# Check - print( reduceFun( [ 0, 1, 4, 5 ], 4 ) ) resultado: a'c'
