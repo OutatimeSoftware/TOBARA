@@ -1,8 +1,7 @@
-# Documentación
-Nuestras funciones se definen en dos grandes partes: Las funciones de usuario y las funciones internas.
+# Documentation
+Our functions defines itself in two: User functions and intern functions.
 
-
-## Funciones internas.
+## Intern functions.
 ### getBin.
 
 
@@ -27,14 +26,12 @@ def getBin ( val, var ):
 
     return binario
 ```
-
-Convierte un valor entero a binario.
-* Entrada: Un valor entero y el número de variables.
-* Proceso: Vuelve el valor entero a su representación binaria, acompleta los espacios faltantes y agrega una casilla para guardar el valor de verdad de término.
-* Salida: Una lista de valores booleanos que representan un término de la función booleana.
+Converts a binary value to an int value.
+* Input: An int and the number of variables.
+* Process: Returns the int value into his binary representation, fills the missing spaces and adds a cell to store the truth value. 
+* Output: A list of boolean values that represent a term of the boolean function.
 
 ### binaryToLetter.
-
 
 ```python
 def binaryToLetter( s ):
@@ -62,10 +59,10 @@ def binaryToLetter( s ):
     return result
 ```
 
-Transforma los valores de un término binario en su respectiva representación literal.
-* Entrada: Un término de la función booleana.
-* Proceso: Convierte los los valores booleanos del término en su respectiva representación literal de la a-z.
-* Salida: Un arreglo que representa la expresión literal del término booleano.
+Transform the values of a binary term in its literal representation.
+* Input: A term of the boolean function
+* Pocess: Converts the boolean values of the term in its literal 'a-z' representation.
+* Output: An array that represents the literal expression of the boolean term.
 
 ### compBinary.
 
@@ -94,10 +91,10 @@ def compBinary( s1, s2 ):
         return False, None
 ```
 
-Compara dos términos booleanos buscando si tienen un valor en común.
-* Entrada: Dos términos booleanos del mismo tamaño.
-* Proceso: Para este caso particular solo nos interesa si tienen una sola similitud, en los casos contrarios, se considera que no se puede reducir.
-* Salida: Devuelve la posición del valor diferente.
+Compare two boolean terms, searching if theres any common value.
+* Input: Two boolean terms of the same size
+* Process: For this particular case, it is only relevant if they have only one similarity, in other cases, it is considererd that you cannot reduce it.
+* Output: Returns the different value position.
 
 ### compBinarySame
 
@@ -116,10 +113,10 @@ def compBinarySame( term, number ):
     return True
 ```
 
-Compara si el numero es igual a un implicante primo.
-* Entrada: Un término y un número.
-* Proceso. Recorre ambos arreglos buscando diferencias. 
-* Salida: Devuelve un valor de verdad.
+Compare if the number is equal to a prime.
+* Input: A number and a term
+* Process: Walk through both arrays searching differences
+* Output: Returns a truth value
 
 ### combinePairs
 
@@ -171,10 +168,10 @@ def combinePairs( group, result ):
     return nextGroup, result
 ```
 
-Comprueba si hay parejas entre dos grupos
-* Entrada: Un grupo de mintérminos con el mismo número de elementos de verdad y una lista de implicantes primos.
-* Proceso: Comprueba si hay parejas con elementos reducibles y crea un nuevo grupo para las parejas reducidas.
-* Salida: Una lista de términos reducidos.
+Prove if there's pairs between two groups.
+* Input: A min-term group with the same number of truth elements and a list of primes
+* Process: Tests if there are pairs with reducible elements and it creates a new group for the reduced pairs
+* Output: A reduced-terms list
 
 ### removeRedundant
 
@@ -199,10 +196,10 @@ def removeRedundant( group ):
     return newGroup
 ```
 
-Elimina términos repetidos de un grupo
-* Entrada: Una lista de términos con el mismo número de elementos de verdad.
-* Proceso: Compara los elementos que no existan en una nueva lista y los guarda para eliminar posibles términos repetidos.
-* Salida: Una lista de términos sin repetición.
+Remove repeated terms of a group
+* Input: A list of terms with the same number of truth elements
+* Process: Compare the elements that doesn't exist in a new list and save them to be able to remove possible repeated terms
+* Output: A non-repeated term list
 
 ### checkEmpty
 
@@ -231,12 +228,12 @@ def checkEmpty(group):
     return False
 ```
 
-Verifica si un grupo esta sin términos.
-* Entrada: Una lista de términos con el mismo número de elementos de verdad.
-* Proceso: Comprueba si la lista se encuentra sin elementos
-* Salida: Un valor booleano que responde a la pregunta.
+Checks if there's a terms-less group
+* Input: A terms list with the same number of truth elements
+* Process: Tests if it is a terms-less list
+* Output: A boolean value that answer the initial question
 
-## De Usuario
+## Of User
 
 ### getTable
 
@@ -258,11 +255,10 @@ def getTable ( var, fun ):
 
     return table
 ```
-
-Genera una matriz que representa una tabla de verdad.
-* Entrada: El número de variables de la función booleana y una lista con los mintérminos de le expresión.
-* Proceso: Transforma los indices de la tabla y agrega su respectivo valor de verdad.
-* Salida. Una matriz que representa la tabla de verdad de la función booleana introducida.
+Generates a matrix that represents a truth table
+* Input: The number of varaibles of the boolean function and a list with the min-tems of the expression
+* Process: It transform the indexes of the table and it adds their respective truth value
+* Output: A matrix that represent the truth table of the introducen boolean function
 
 ### getMinTable
 
@@ -284,11 +280,10 @@ def getMinTable ( var, fun ):
 
     return table
 ```
-
-Genera una matriz que representa una tabla de verdad.
-* Entrada: El número de variables de la función booleana y una lista con los mintérminos de le expresión.
-* Proceso: Transforma los indices de la tabla y unicamente agregando a los elementos que tengan un valor de verdadero.
-* Salida. Una matriz que representa la tabla de verdad de la función booleana introducida excluyendo a los términos con valor negativo.
+Generates a matrix that represent a truth table
+* Input: The number of variables of the boolean function and a list with the min-terms of the expression
+* Process: It transform the indexes of the table adding only truthy values
+* Output: A matrix that represent the truth table of the introduced boolean function, excluding the non-truthy values.
 
 ### getKmap
 
@@ -317,10 +312,10 @@ def getKmap( var, fun ):
     return Kmap
 ```
 
-Genera una matriz que representa un Kmap
-* Entrada: El número de variables de la función booleana y una lista con los mintérminos de le expresión.
-* Proceso: Transforma el valor de los indices del mintérmino en las coordenadas generales de los kmaps.
-* Salida. Una matriz que representa el kmap de la función booleana.
+Generates a matrix that represents a Kmap
+* Input: The number of variables of the boolean function and a list with the min-terms of the expression
+* Process: It transforms the indexes values of the min-terms in the general coordinates of the Kmaps
+* Output: A matrix that represents the Kmap of the boolean function
 
 ### reduceFun
 
@@ -374,7 +369,7 @@ def reduceFun( n, fun ):
     return s[ :( len( s ) - 3 ) ]
 ```
 
-Función que sirve para encontrar implicantes primos de una expresión booleana y reducirlos.
-* Entrada: El número de variables de la función booleana y una lista con los mintérminos de le expresión.
-* Proceso: Crea los grupos de términos con el mismo número de valores de verdad y los compara para buscar expresiones reducibles.
-* Salida: Un string de elementos que representan la expresión minimizada 
+Function that it's use it to find primes of an boolean expression to minify them
+* Input: The number of variables of the boolean function and a list of the min-terms of the expression
+* Process: It creates groups of terms with the same number of truth values and it compares them to search reducible expressions.
+* Output: A string of elements that represents the minified expression
