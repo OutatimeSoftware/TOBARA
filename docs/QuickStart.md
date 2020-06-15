@@ -1,48 +1,73 @@
-# ProjectTOBARA
+# TOBARA Quick Start.
 
-The Only Boolean Algebra Reduction App
+TOBARA es una libreria de python diseñada para la manipulación de algebra booleana que nos facilita la implementación de ciertas herramientas, como las tablas de verdad, los kmaps, etc.
+Para comenzar a utilizar TABORA lo único que necesitas entender son los conceptos básicos del algebra booleana para poder representar de manera correcta lo que nosotros podemos observar, por lo que primero intentemos ver como funcionana las partes esenciales: el número de variables y los mintérminos.
 
-## Description
+Para definir una función booleana nosotros tenemos que definir el número de variables que lo conforman, esto lo puedes saber observas la cantidad de letras involucradas en tu función booleana, por otro lado, los mintérminos son la representación booleana de dichas variables.
 
-Our system is a Boolean function analyzer tool which main task is to reduce the function in its simplest expression. 
-With this information we will create an library that allow to any user consulate the elements of any Boolean function they want to introduce. 
-
-
-## Process
-
-Our main goal is the analysis of the Boolean functions and the breakdown of their main components: 
--	Get the function 
--	Determinate their variables
--	Determinate their terms
--	Simplify the function
-
-## Objective
-
-Algorithms for reducing Boolean functions. 
-
-## Use cases
-
-##### UC001. Simplest expression
-
-**Description:** Consult if the function is in its simplest expression.
-
-**Sequence**
-
-1. Consult the tool Mini(funciónBool).
-2. Receives a Boolean value (True or False).
-
-**Alternative departures:** 1.1 If the user ingress an invalid input the system will return error and the user will have to change it.
+Si te pones pensar, existe una relación muy sencila entre las variables y los mintérminos, cada vez que agregas una variable, tienes que contemplar dos posibilidades más de formar un término, pero veamoslo de una manera más visual:
 
 
-##### UC002. Simplify
+```python
+tabla = getTable( 1,[ ] )
+print( "1 variable" )
+for line in tabla:
+    print( line )
+print()
 
-**Description:** Given a Boolean function, the system returns its simples expression. 
+tabla = getTable( 2,[ ] )
+print( "2 variables" )
+for line in tabla:
+    print( line )
+print()
+    
+tabla = getTable( 3,[ ] )
+print( "3 variables" )
+for line in tabla:
+    print( line )
+print()
+    
+tabla = getTable( 4,[ ] )
+print( "4 variables" )
+for line in tabla:
+    print( line )
+```
 
-**Sequence**
-
-1. Consult the tool reducc(funciónBool).
-2. Receives an array with the simplified function.
-
-**Alternative departures:** 1.1 If the user ingress an invalid character the system will return error and the user will have to change it.
-
-
+    1 variable
+    [0, 0]
+    [1, 0]
+    
+    2 variables
+    [0, 0, 0]
+    [0, 1, 0]
+    [0, 1, 0]
+    [1, 1, 0]
+    
+    3 variables
+    [0, 0, 0, 0]
+    [0, 0, 1, 0]
+    [0, 0, 1, 0]
+    [0, 1, 1, 0]
+    [0, 0, 1, 0]
+    [1, 0, 1, 0]
+    [0, 1, 1, 0]
+    [1, 1, 1, 0]
+    
+    4 variables
+    [0, 0, 0, 0, 0]
+    [0, 0, 0, 1, 0]
+    [0, 0, 0, 1, 0]
+    [0, 0, 1, 1, 0]
+    [0, 0, 0, 1, 0]
+    [0, 1, 0, 1, 0]
+    [0, 0, 1, 1, 0]
+    [0, 1, 1, 1, 0]
+    [0, 0, 0, 1, 0]
+    [1, 0, 0, 1, 0]
+    [0, 1, 0, 1, 0]
+    [1, 1, 0, 1, 0]
+    [0, 0, 1, 1, 0]
+    [1, 0, 1, 1, 0]
+    [0, 1, 1, 1, 0]
+    [1, 1, 1, 1, 0]
+    
