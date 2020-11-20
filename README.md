@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://github.com/MiguelRAvila/projectTOBARA/blob/master/images/logo.png?raw=true" alt="TOBARALogo"/>
   
-  <h3 > projectTOBARA: The Only Boolean Algebra Reduction App</h3>
+  <h3 > T.O.B.A.R.A: The Only Boolean Algebra Reduction App</h3>
 </p>
 
 [![Inline docs](http://inch-ci.org/github/dwyl/hapi-auth-jwt2.svg?branch=master)](https://github.com/MiguelRAvila/projectTOBARA/blob/master/docs)
